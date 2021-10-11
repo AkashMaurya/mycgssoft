@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="CGSSOFT.Admin.admin"  %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="sticky-top shadow">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-lg-top sticky-md-top sticky-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.aspx">CGSSOFT</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                               <!-- <a class="nav-link active" aria-current="page" runat="server" href="~/Admin/Add_Data.aspx">Admin Page</a> -->
+                                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Admin/Add_Data.aspx" class="nav-link">Add_Data</asp:HyperLink>
+                            </li>
+                            <li class="nav-item">
+                             <!--   <a class="nav-link" href="~/Admin/View_Data.aspx" runat="server">View Data</a> -->
+                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Admin/View_Data.aspx" class="nav-link" >View Data</asp:HyperLink>
+                                
+                            </li>
+                            <!--  <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li> -->
+
+                        </ul>
+
+
+
+                        &nbsp;
+                              <asp:Button ID="Button1" runat="server" Text="Logout" class="btn btn-outline-success" type="submit" UseSubmitBehavior="false" OnClick="Button1_Click"/> 
+
+
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+
+         <!-- footer -->
+        <br />
+        <div class="row">
+            <footer class="footer sticky-bottom mt-auto py-3 bg-light" style="position: absolute, bottom;">
+                <div class="container">
+                    <span class="text-muted" style="text-align: center">Copyright © 2021 - CGSSOFT (Arabian Gulf University)</span>
+                </div>
+            </footer>
+        </div>
+
+
+    </form>
+
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
